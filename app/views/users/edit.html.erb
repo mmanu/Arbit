@@ -1,0 +1,66 @@
+<%= form_for @user do |f| %>
+  <table summary="account settings">
+    <tr>
+      <td>
+        <%= f.label :first_name, "First name"  %>
+      </td>
+      <td>
+        <%= f.text_field :first_name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :last_name, "Last name" %>
+      </td>
+      <td>
+        <%= f.text_field :last_name%>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :location, "Location" %>
+      </td>
+      <td>
+        <%= f.text_field :location %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :security_question, "Security Question" %>
+      </td>
+      <td>
+        <%= f.text_field :security_question %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :security_answer, "Security Answer" %>
+      </td>
+      <td>
+        <%= f.text_field :security_answer %>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit "Submit" %>
+  <%= link_to "Cancel", user_posts_path(@user) %>
+<%end%>
+
+
+<style>
+form
+{
+  font-family: Verdana, sans-serif;
+  width: 500px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 2.4em;
+  margin-left:20px;
+}
+
+form label
+{
+  color: green;
+  padding-right: 5px;
+}
+
+</style>

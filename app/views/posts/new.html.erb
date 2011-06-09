@@ -1,0 +1,4 @@
+<%= form_for @post, :url => {:action => "create"} do |f|%>
+  <%= render :partial => "/posts/new_post_form", :locals => {:f => f} %>
+<%end%>
+

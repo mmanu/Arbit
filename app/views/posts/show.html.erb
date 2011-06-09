@@ -1,0 +1,15 @@
+<div>
+  Title : <%= @post.title %>
+</div>
+<div>
+  <%=@post.content %>
+</div>
+<%= link_to "Edit", edit_user_post_path(@user,@post) %>
+<div id="comment">
+  Comments:
+  <%= render :partial => "/comments/comment", :collection => @post.comments%>
+  <%= form_for Comment.new, :url => post_comments_url(@post) do |f|%>
+    <%= render :partial => "/comments/new_comment_form", :locals => {:f => f} %>
+  <%end%>
+</div>
+

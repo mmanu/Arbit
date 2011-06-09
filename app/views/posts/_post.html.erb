@@ -1,0 +1,11 @@
+<tr>
+  <td><%= link_to post.title, user_post_path(@user, post)    %></td>
+  <td><%= link_to "Edit", edit_user_post_path(@user,post) %></td>
+  <td><%= button_to "Delete", user_post_path(@user, post), :method => :delete %></td>
+  <td><%= link_to "Comments(#{post.comments.size})", post_comments_path(post) %></td>
+</tr>
+
+
+
+
+

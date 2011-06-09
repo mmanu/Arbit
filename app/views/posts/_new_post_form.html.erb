@@ -1,0 +1,10 @@
+<%= f.label :title_label, "Title :" %>
+<%= f.text_field :title, :size => 10-%>
+<%= f.text_area :content, :class => 'tinymce'%>
+<%  if !@post.published? %>
+  <%= f.submit "Publish", :onclick => "jQuery('#post_published').attr('value') = 'true'"  %>
+  <%= f.hidden_field :published, :value => false %>
+<%end%>
+<%= f.submit "Save" -%>
+<%= include_tinymce %>
+<%= javascript_tag %Q[getTinymce();] %>
